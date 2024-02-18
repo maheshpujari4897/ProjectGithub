@@ -1,0 +1,44 @@
+package Assignment_1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Git_Hub_Atomate {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		Thread.sleep(3000);
+		driver.findElement(By.id("APjFqb")).click();
+		Thread.sleep(3000);
+		WebElement Searchtf = driver.findElement(By.id("APjFqb"));
+		Searchtf.sendKeys("GitHub log in ");
+		Searchtf.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//h3[text()='Sign in to GitHub']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("login_field")).sendKeys("maheshpujari4897@gmail.com");
+		Thread.sleep(3000);
+		driver.findElement(By.id("password")).sendKeys("Mahesh@6161");
+		Thread.sleep(4000);
+		driver.findElement(By.name("commit")).click();
+		Thread.sleep(20000);
+		driver.findElement(By.xpath("(//span[text()='New'])[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//INPUT[@aria-label=\"Repository\"]")).sendKeys("ProjectGithub");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//DIV[@data-target='react-app.reactRoot']/FORM/DIV[5]/BUTTON/SPAN/SPAN[@data-component='text']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='creating a new file']")).click();
+		Thread.sleep(2000);
+		
+	}
+
+}
